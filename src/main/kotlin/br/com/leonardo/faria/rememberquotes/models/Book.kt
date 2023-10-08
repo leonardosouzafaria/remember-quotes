@@ -4,15 +4,12 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
-import jakarta.persistence.ManyToMany
-import jakarta.persistence.ManyToOne
 
 @Entity
-data class Quotes(
+data class Book(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long,
-    val quote: String,
-    @ManyToOne
-    val book: Book,
+    val name: String,
+    val author: String
 )
