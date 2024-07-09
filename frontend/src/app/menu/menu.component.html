@@ -3,19 +3,19 @@
     <div class="position-sticky pt-3 sidebar-sticky">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/lista']">
             <span data-feather="home" class="align-text-bottom"></span>
             Lista
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file" class="align-text-bottom"></span>
+          <a class="nav-link" [routerLink]="['/cadastrar-citacao']">
+            <span data-feather="file" class="align-text-bottom" ></span>
             Cadastrar Citação
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" [routerLink]="['/cadastrar-livro']">
             <span data-feather="shopping-cart" class="align-text-bottom"></span>
             Cadastrar Livro
           </a>
