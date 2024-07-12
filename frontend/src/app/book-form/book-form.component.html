@@ -1,1 +1,25 @@
-<p>book-form works!</p>
+<h2>Cadastrar Livro</h2>
+
+<form  class="needs-validation" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <div class="row g-3">
+    <div class="col-sm-12">
+      <label for="text-quote" class="form-label">Nome do Livro</label>
+      <input type="text" class="form-control" id="text-quote" placeholder="Insira o nome do livro" value="" formControlName="name" required>
+      <div class="invalid-feedback">
+        Valid name is required.
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <label for="text-quote" class="form-label">Nome do Autor</label>
+      <input type="text" class="form-control" id="text-quote" placeholder="Insira o nome do Autor" value="" formControlName="author" required>
+      <div class="invalid-feedback">
+        Valid author is required.
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+
+  <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastrar Livro</button>
+</form>

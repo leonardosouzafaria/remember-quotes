@@ -27,4 +27,8 @@ export class RememberQuotesService {
     return this.http.get<Book>(href)
   }
 
+  registerBook(book: Book) {
+    return this.http.post<any>(this.basePath.concat("/books"), book)
+  }
+
 }

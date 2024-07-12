@@ -6,22 +6,22 @@
       <label for="text-quote" class="form-label">Citação</label>
       <input type="text" class="form-control" id="text-quote" placeholder="Insira a citação que deseja ser lembrado" value="" formControlName="quote" required>
       <div class="invalid-feedback">
-        Valid first name is required.
+        Insira uma citação valida.
       </div>
     </div>
 
     <div class="col-md-5">
       <label for="book-select" class="form-label">Selecione o Livro</label>
       <select class="form-select" id="book-select" formControlName="book" required>
-        <option *ngFor="let book of books" [value]="book.name">{{book.name}}</option>
+        <option *ngFor="let book of books" [value]="book._links?.book?.href">{{book.name}}</option>
       </select>
       <div class="invalid-feedback">
-        Please select a valid country.
+        Por favor insira um valor valido
       </div>
     </div>
   </div>
 
   <hr class="my-4">
 
-  <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+  <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastrar citação</button>
 </form>
