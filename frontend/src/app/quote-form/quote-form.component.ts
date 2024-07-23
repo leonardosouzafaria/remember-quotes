@@ -7,6 +7,7 @@ import { QuoteForm } from './model/quote-form';
 import { HttpClient } from '@angular/common/http';
 import { Book } from './model/book';
 import { Quote } from '../services/remeber-quotes/model/quote.model';
+import { environment } from 'src/app/environments/environment';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class QuoteFormComponent implements OnInit {
 
   books: Book[] = [];
   quoteForm: FormGroup;
+  private basepath = environment.apiUrl
 
   constructor(
     private formBuilder: FormBuilder,
@@ -58,7 +60,7 @@ export class QuoteFormComponent implements OnInit {
   }
 
   getAllBooks() {
-    this.http.get<any>('http://localhost:8080/books').subscribe(data => {
+    this.http.get<any>(this.basepath.concat("/books")).subscribe(data => {
       this.books = data._embedded.books;
     });
   }

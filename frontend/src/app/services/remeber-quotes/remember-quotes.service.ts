@@ -2,6 +2,7 @@ import { Quote } from './model/quote.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/app/environments/environment';
 import { Book } from 'src/app/quote-form/model/book';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Book } from 'src/app/quote-form/model/book';
 })
 export class RememberQuotesService {
 
-  private basePath = "http://localhost:8080"
+  private basePath = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
