@@ -4,7 +4,7 @@ services:
     build: ./backend/
     ports:
       - "8080:8080"
-     env_file:
+    env_file:
       - ../variaveis-ambientes/remember-quotes/variables.env
   angular-app:
     build: ./frontend/
