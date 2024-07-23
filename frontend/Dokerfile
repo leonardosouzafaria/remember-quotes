@@ -1,0 +1,3 @@
+# Diretorio-angular/Dockerfile
+FROM nginx:alpine
+COPY dist/sua-aplicacao-angular /usr/share/nginx/html
