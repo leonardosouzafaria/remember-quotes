@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
      env_file:
-      - ./variables.env
+      - ../variaveis-ambientes/remember-quotes/variables.env
   angular-app:
     build: ./frontend/
     ports:
