@@ -6,6 +6,8 @@ services:
       - "8080:8080"
     env_file:
       - ../variaveis-ambientes/remember-quotes/variables.env
+    volumes:
+      - /var/lib/docker/volumes/remember-quotes/db:/db
   angular-app:
     build: ./frontend/
     ports:
