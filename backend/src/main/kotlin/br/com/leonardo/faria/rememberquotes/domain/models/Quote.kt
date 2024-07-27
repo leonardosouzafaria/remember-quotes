@@ -14,7 +14,7 @@ data class Quote(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long,
-    @Column(columnDefinition = "TEXT")
+    @Column(length = 1000)
     val quote: String,
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
