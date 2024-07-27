@@ -1,6 +1,7 @@
 package br.com.leonardo.faria.rememberquotes.domain.models
 
 import br.com.leonardo.faria.rememberquotes.domain.models.Book
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -13,6 +14,7 @@ data class Quote(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long,
+    @Column(length = 4000)
     val quote: String,
     @ManyToOne
     @JoinColumn(name = "book_id", referencedColumnName = "id")
