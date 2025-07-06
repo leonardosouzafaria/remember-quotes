@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wdth,wght@75..100,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu+Sans:wdth,wght@75..100,100..800&display=swap");
+
+.logo-text {
+  font-family: "Ubuntu Sans", sans-serif;
+  text-transform: lowercase;
+  color: #37375e;
+  font-weight: 500;
+
+  .blue-gray {
+    color: #7278ab;
+    font-weight: 400;
+  }
+}
+
+.menu {
+  font-family: "Ubuntu Sans", sans-serif;
+}
