@@ -1,0 +1,158 @@
+.quote-form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: calc(100vh - 63px);
+  flex-flow: column;
+  background-color: #f9f9fa;
+
+  .quote-input {
+    min-width: 41vw;
+    min-height: 12vh;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu Sans', sans-serif;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .quote-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+
+    input.quote-input {
+      width: 100%;
+      padding-right: 3rem; // espaço para o botão
+      padding-left: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .floating-label {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      transition: all 0.2s ease;
+      pointer-events: none;
+      color: #6c757d;
+      background: #f9f9fa;
+      padding: 0 0.25rem;
+    }
+
+    input:focus + .floating-label,
+    input:not(:placeholder-shown) + .floating-label {
+      top: 0.3rem;
+      font-size: 0.75rem;
+      color: #495057;
+    }
+
+    .send-button {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #0d6efd;
+      padding: 0.3rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #084298;
+      }
+    }
+  }
+  }
+
+  .subtitle-quote {
+    font-size: 25px;
+  }
+}
+.quote-form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: calc(100vh - 63px);
+  flex-flow: column;
+  background-color: #f9f9fa;
+
+  .quote-input {
+    min-width: 41vw;
+    min-height: 12vh;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu Sans', sans-serif;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .quote-input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+
+    input.quote-input {
+      width: 100%;
+      padding-right: 3rem; // espaço para o botão
+      padding-left: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .floating-label {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      transition: all 0.2s ease;
+      pointer-events: none;
+      color: #6c757d;
+      background: #f9f9fa;
+      padding: 0 0.25rem;
+    }
+
+    input:focus + .floating-label,
+    input:not(:placeholder-shown) + .floating-label {
+      top: 0.3rem;
+      font-size: 0.75rem;
+      color: #495057;
+    }
+
+    .send-button {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #0d6efd;
+      padding: 0.3rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #084298;
+      }
+    }
+  }
+  }
+
+  .subtitle-quote {
+    font-size: 25px;
+  }
+}

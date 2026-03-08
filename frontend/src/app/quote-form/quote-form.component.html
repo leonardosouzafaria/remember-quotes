@@ -1,27 +1,61 @@
-<h2>Cadastrar Citação</h2>
+<div class="quote-form">
+  <h2 class="subtitle-quote">Cadastrar Citação</h2>
 
-<form  class="needs-validation" [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
-  <div class="row g-3">
-    <div class="col-sm-12">
-      <label for="text-quote" class="form-label">Citação</label>
-      <input type="text" class="form-control" id="text-quote" placeholder="Insira a citação que deseja ser lembrado" value="" formControlName="quote" required>
-      <div class="invalid-feedback">
-        Insira uma citação valida.
+  <form
+    class="needs-validation"
+    [formGroup]="quoteForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="quote-input-wrapper">
+      <input
+        type="text"
+        class="form-control quote-input"
+        id="text-quote"
+        placeholder=" "
+        formControlName="quote"
+        required
+      />
+      <label for="text-quote" class="floating-label"
+        >Insira a citação que deseja ser lembrado</label
+      >
+      <button class="send-button" type="submit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-send"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M15.964 0.686a.5.5 0 0 0-.65-.65L.637 7.115a.5.5 0 0 0 .023.91l5.97 2.392 2.392 5.97a.5.5 0 0 0 .91.023l7.08-14.21ZM6.306 9.694l6.65-6.65-5.347 12.077-1.303-3.274-3.274-1.303 3.274-1.303Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="invalid-feedback">Insira uma citação válida.</div>
+
+    <div class="row g-3">
+      <div class="col-md-5">
+        <label for="book-select" class="form-label">Selecione o Livro</label>
+        <select
+          class="form-select"
+          id="book-select"
+          formControlName="book"
+          required
+        >
+          <option *ngFor="let book of books" [value]="book._links?.book?.href">
+            {{ book.name }}
+          </option>
+        </select>
+        <div class="invalid-feedback">Por favor insira um valor valido</div>
       </div>
     </div>
 
-    <div class="col-md-5">
-      <label for="book-select" class="form-label">Selecione o Livro</label>
-      <select class="form-select" id="book-select" formControlName="book" required>
-        <option *ngFor="let book of books" [value]="book._links?.book?.href">{{book.name}}</option>
-      </select>
-      <div class="invalid-feedback">
-        Por favor insira um valor valido
-      </div>
-    </div>
-  </div>
+    <hr class="my-4" />
 
-  <hr class="my-4">
-
-  <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastrar citação</button>
-</form>
+    <button class="w-100 btn btn-primary btn-lg" type="submit">
+      Cadastrar citação
+    </button>
+  </form>
+</div>
