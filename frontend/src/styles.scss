@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--tui-font-text);
+  background-color: var(--tui-base-01); 
+}
+
+/* src/styles.scss */
+
+:root {
+  /* Definindo os tons de cinza/azul escuro que o PrimeFlex procura */
+  --p-surface-0: #ffffff;
+  --p-surface-50: #f9fafb;
+  --p-surface-100: #f3f4f6;
+  --p-surface-200: #e5e7eb;
+  --p-surface-300: #d1d5db;
+  --p-surface-400: #9ca3af;
+  --p-surface-500: #6b7280;
+  --p-surface-600: #4b5563;
+  --p-surface-700: #374151;
+  --p-surface-800: #1f2937;
+  --p-surface-900: #111827; /* A cor que deu erro! */
+  --p-surface-950: #030712;
+
+  /* Já que estamos aqui, vamos definir o Cyan para bater com seu logo */
+  --p-cyan-400: #22d3ee;
+  --p-cyan-200: #26abe3;
+
+  --p-bluegray-50: #f8fafc;  /* Esta é a cor suave para o body */
+  --p-bluegray-100: #f1f5f9;
+  --p-bluegray-200: #e2e8f0;
+  --p-bluegray-300: #cbd5e1;
+  --p-bluegray-400: #94a3b8;
+  --p-bluegray-500: #64748b;
+  --p-bluegray-600: #475569;
+  --p-bluegray-700: #334155;
+  --p-bluegray-800: #1e293b;
+  --p-bluegray-900: #0f172a;
+}
