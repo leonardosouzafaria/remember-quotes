@@ -1,4 +1,4 @@
-<tui-textfield iconStart="@tui.message-square-quote" [formGroup]="formGroup" >
+<tui-textfield iconStart="@tui.message-square-quote" [formGroup]="formGroup">
   <label tuiLabel>Cadastrar Citação</label>
   <textarea
     formControlName="quoteText"
@@ -8,4 +8,8 @@
     tuiTextarea
     [rows]="5"
   ></textarea>
+
+  <button tuiIconButton tuiSlot="right" type="submit" size="s" iconStart="@tui.forward" appearance="outline-grayscale">
+    Salvar Citação
+  </button>
 </tui-textfield>

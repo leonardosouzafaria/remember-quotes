@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { TuiTextfieldComponent } from '@taiga-ui/core';
+import { TuiButton, TuiTextfieldComponent } from '@taiga-ui/core';
 import { TuiTextarea } from '@taiga-ui/kit';
 
 @Component({
   selector: 'app-input-quote',
-  imports: [ReactiveFormsModule, TuiTextarea, TuiTextfieldComponent],
+  imports: [ReactiveFormsModule, TuiTextarea, TuiTextfieldComponent, TuiButton],
   templateUrl: './input-quote.html',
   styleUrl: './input-quote.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

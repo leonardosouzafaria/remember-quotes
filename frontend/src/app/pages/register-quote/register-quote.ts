@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { InputQuote } from "../../components/input-quote/input-quote";
-import { TuiButton } from '@taiga-ui/core';
-import { FormControl, FormGroup, ReactiveFormsModule, ɵInternalFormsSharedModule } from "@angular/forms";
+import { TuiButton, TuiGroup } from '@taiga-ui/core';
+import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-register-quote',
-  imports: [ReactiveFormsModule, InputQuote, TuiButton, ɵInternalFormsSharedModule],
+  imports: [ReactiveFormsModule, InputQuote, TuiGroup],
   templateUrl: './register-quote.html',
   styleUrl: './register-quote.scss',
 })

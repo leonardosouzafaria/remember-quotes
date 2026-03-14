@@ -1,9 +1,15 @@
-<div class="flex flex-column h-full px-4 align-items-center justify-content-center flex-grow-1">
-    <div >
-        <p class="philosophy-quote">“Quem retorna ao conhecimento transforma informação em sabedoria.”</p>
-        <form [formGroup]="quoteForm">
-            <app-input-quote [formGroup]="quoteForm"></app-input-quote>
-            <button tuiButton appearance="outline" class="mt-4">Salvar Citação</button>
-        </form>
+<div class="flex flex-column h-screen px-4">
+
+    <div class="flex flex-grow-1 align-items-center justify-content-center">
+      <p class="philosophy-quote">
+        “Quem retorna ao conhecimento transforma informação em sabedoria.”
+      </p>
     </div>
+
+    <form [formGroup]="quoteForm" class=" pb-4 w-full max-w-xl mx-auto input-wrapper">
+      <div tuiGroup class="group">
+        <app-input-quote [formGroup]="quoteForm"></app-input-quote>
+      </div>
+    </form>
+
 </div>
