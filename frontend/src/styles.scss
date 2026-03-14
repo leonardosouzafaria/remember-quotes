@@ -8,9 +8,14 @@ html, body {
   background-color: var(--tui-base-01); 
 }
 
+.t-root-content {
+  background-color: var(--tui-base-01); 
+}
+
 /* src/styles.scss */
 
 :root {
+  --tui-base-01: var(--p-bluegray-100) !important; // body background-color
   /* Definindo os tons de cinza/azul escuro que o PrimeFlex procura */
   --p-surface-0: #ffffff;
   --p-surface-50: #f9fafb;
