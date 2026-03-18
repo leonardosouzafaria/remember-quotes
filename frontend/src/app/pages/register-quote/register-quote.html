@@ -1,15 +1,18 @@
 <div class="flex flex-column h-screen px-4">
+  <section class="flex flex-grow-1 justify-content-center flex-column">
+    <p class="philosophy-quote">
+      “Quem retorna ao conhecimento transforma informação em sabedoria.”
+    </p>
 
-    <div class="flex flex-grow-1 align-items-center justify-content-center">
-      <p class="philosophy-quote">
-        “Quem retorna ao conhecimento transforma informação em sabedoria.”
-      </p>
+    @for (option of menuOptions; track option.label) {
+      <tui-chip size="s" class="mb-3">{{ option.label }}</tui-chip>
+    }
+    
+  </section>
+
+  <form [formGroup]="quoteForm" class="pb-4 w-full max-w-xl mx-auto input-wrapper">
+    <div tuiGroup class="group">
+      <app-input-quote [formGroup]="quoteForm"></app-input-quote>
     </div>
-
-    <form [formGroup]="quoteForm" class=" pb-4 w-full max-w-xl mx-auto input-wrapper">
-      <div tuiGroup class="group">
-        <app-input-quote [formGroup]="quoteForm"></app-input-quote>
-      </div>
-    </form>
-
+  </form>
 </div>
