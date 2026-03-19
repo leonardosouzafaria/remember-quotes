@@ -1,12 +1,14 @@
-<tui-textfield iconStart="@tui.message-square-quote" [formGroup]="formGroup">
+<tui-textfield iconStart="@tui.message-square-quote"  [formGroup]="formGroup">
   <label tuiLabel>Cadastrar Citação</label>
   <textarea
     formControlName="quoteText"
     class="quote-input"
-    placeholder="Digite a citação..."
     required
     tuiTextarea
     [rows]="5"
+    [min] = "1"
+    [max]="5"
+    [tuiTextfieldCleaner]="true"
   ></textarea>
 
   <button tuiIconButton tuiSlot="right" type="submit" size="s" iconStart="@tui.forward" appearance="outline-grayscale">
