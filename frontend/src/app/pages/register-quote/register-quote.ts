@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { InputQuote } from "../../components/input-quote/input-quote";
 import { TuiGroup } from '@taiga-ui/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { TuiChip } from "@taiga-ui/kit";
+import { TuiChip, TuiCarousel } from "@taiga-ui/kit";
 
 
 @Component({
   selector: 'app-register-quote',
-  imports: [ReactiveFormsModule, InputQuote, TuiGroup, TuiChip],
+  imports: [ReactiveFormsModule, InputQuote, TuiGroup, TuiChip, TuiCarousel],
   templateUrl: './register-quote.html',
   styleUrl: './register-quote.scss',
 })
