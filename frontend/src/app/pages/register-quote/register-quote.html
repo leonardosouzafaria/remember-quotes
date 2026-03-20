@@ -12,7 +12,7 @@
   <form [formGroup]="quoteForm" class="pb-4 w-full max-w-xl mx-auto input-wrapper">
     <tui-carousel #carousel>
       <div tuiGroup *tuiItem class="group">
-        <app-input-quote [formGroup]="quoteForm" (click)="carousel.next()"></app-input-quote>
+        <app-input-quote [formGroup]="quoteForm" (nextInput)="carousel.next()"></app-input-quote>
       </div>
       <div tuiGroup *tuiItem class="group item">
         <app-input-quote [formGroup]="quoteForm"></app-input-quote>

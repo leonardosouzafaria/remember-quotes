@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TuiButton, TuiTextfield } from '@taiga-ui/core';
 import { TuiTextarea } from '@taiga-ui/kit';
@@ -12,4 +12,9 @@ import { TuiTextarea } from '@taiga-ui/kit';
 })
 export class InputQuote {
   @Input() formGroup!: FormGroup;
+  @Output() nextInput = new EventEmitter<void>();
+
+  next() {
+    this.nextInput.emit();
+  }
 }
