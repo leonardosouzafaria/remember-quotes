@@ -15,7 +15,10 @@
         <app-input-quote [formGroup]="quoteForm" (nextInput)="carousel.next()"></app-input-quote>
       </div>
       <div tuiGroup *tuiItem class="group item">
-        <app-input-quote [formGroup]="quoteForm"></app-input-quote>
+        <app-input-author [formGroup]="quoteForm" (nextInput)="carousel.next()"></app-input-author>
+      </div>
+      <div tuiGroup *tuiItem class="group item">
+        <app-input-book [formGroup]="quoteForm" (nextInput)="carousel.next()"></app-input-book>
       </div>
     </tui-carousel>
   </form>

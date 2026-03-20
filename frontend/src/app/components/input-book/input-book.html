@@ -1,0 +1,23 @@
+<tui-textfield iconStart="@tui.book-open-text" [formGroup]="formGroup">
+  <label tuiLabel>Cadastrar Livro</label>
+  <input tuiComboBox formControlName="bookName"/>
+  
+  <button
+    (click)="next()"
+    tuiIconButton
+    tuiSlot="right"
+    type="submit"
+    size="s"
+    iconStart="@tui.forward"
+    appearance="outline-grayscale"
+  >
+    Salvar Autor
+  </button>
+
+  <tui-data-list-wrapper
+        *tuiTextfieldDropdown
+        new
+        [items]="books | tuiFilterByInput"
+    />
+
+</tui-textfield>

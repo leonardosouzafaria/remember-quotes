@@ -12,6 +12,10 @@ html, body {
   background-color: var(--tui-base-01); 
 }
 
+.t-item {
+  padding: 0 !important;
+}
+
 /* src/styles.scss */
 
 :root {
