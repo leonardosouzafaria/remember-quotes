@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TuiButton, TuiTextfield } from '@taiga-ui/core';
 import { TuiComboBox, TuiDataListWrapper, TuiFilterByInputPipe } from '@taiga-ui/kit';
+import { Book } from '../../models';
 
 @Component({
   selector: 'app-input-book',
@@ -16,22 +17,18 @@ import { TuiComboBox, TuiDataListWrapper, TuiFilterByInputPipe } from '@taiga-ui
   templateUrl: './input-book.html',
   styleUrl: './input-book.scss',
 })
-export class InputBook {
+export class InputBook implements OnInit {
 
   @Input() formGroup!: FormGroup;
+  @Input() books: string[] = [];
   @Output() nextInput = new EventEmitter<void>();
+  @Output() register = new EventEmitter<void>();
 
-  protected readonly books = [
-    'Darth Vader',
-    'Luke Skywalker',
-    'Princess Leia',
-    'Han Solo',
-    'Obi-Wan Kenobi',
-    'Yoda',
-  ] as const;
-
-  next() {
-    this.nextInput.emit();
+  ngOnInit() {
+    // Quando o componente inicializa, a lista de books já foi definida via input binding
   }
 
+  registerQuote() {
+    this.register.emit();
+  }
 }

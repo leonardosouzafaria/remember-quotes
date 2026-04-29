@@ -8,6 +8,11 @@ html, body {
   background-color: var(--tui-base-01); 
 }
 
+.main-content {
+  padding-top: 2.75rem;
+  height: calc(100vh - 2.75rem) !important;
+}
+
 .t-root-content {
   background-color: var(--tui-base-01); 
 }
